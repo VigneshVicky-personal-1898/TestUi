@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+AI-ASSISTED: Cursor
+PROMPT: Popup window page with stable automation identifiers
+ACCEPTED-BY: vignesh
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TestUi Popup</title>
+  <style>
+    body {
+      font-family: "IBM Plex Sans", sans-serif;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #0d47a1, #00838f);
+      color: white;
+    }
+    .card {
+      background: rgba(255,255,255,0.12);
+      padding: 32px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    button {
+      margin-top: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body id="popup-page" data-testid="popup-page">
+  <div class="card" id="popup-card" data-testid="popup-card">
+    <h1 id="popup-title" data-testid="popup-title">TestUi Popup Window</h1>
+    <p id="popup-body" data-testid="popup-body">Use this window/tab for multi-window automation practice.</p>
+    <button type="button" id="popup-btn-close" name="popup-btn-close" data-testid="popup-btn-close" onclick="window.close()">
+      Close Window
+    </button>
+  </div>
+</body>
+</html>

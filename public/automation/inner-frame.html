@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+AI-ASSISTED: Cursor
+PROMPT: Inner nested frame with stable ids/names for frame switching
+ACCEPTED-BY: vignesh
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inner Frame</title>
+  <style>
+    body { font-family: sans-serif; margin: 10px; background: #e0f2f1; }
+  </style>
+</head>
+<body id="inner-frame-body" data-testid="inner-frame-body">
+  <h4 id="inner-frame-title" data-testid="inner-frame-title">Inner Nested Frame</h4>
+  <button
+    type="button"
+    id="inner-frame-button"
+    name="inner-frame-button"
+    data-testid="inner-frame-button"
+    onclick="document.getElementById('inner-frame-msg').textContent='Clicked inside nested frame'"
+  >
+    Click Inside Nested Frame
+  </button>
+  <p id="inner-frame-msg" data-testid="inner-frame-msg"></p>
+</body>
+</html>

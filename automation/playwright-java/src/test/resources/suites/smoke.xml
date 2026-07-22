@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+AI-ASSISTED: Cursor
+PROMPT: Complete Selenium TestNG base test, listeners, sample tests
+ACCEPTED-BY: vignesh
+-->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestUi-Playwright-Smoke" verbose="1">
+    <listeners>
+        <listener class-name="com.testui.playwright.listeners.TestListener"/>
+    </listeners>
+    <parameter name="baseUrl" value="http://localhost:5173"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="headless" value="false"/>
+    <test name="Smoke">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.testui.playwright.tests.LoginTest"/>
+            <class name="com.testui.playwright.tests.DashboardTest"/>
+            <class name="com.testui.playwright.tests.UsersTest"/>
+        </classes>
+    </test>
+</suite>

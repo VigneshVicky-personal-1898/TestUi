@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+AI-ASSISTED: Cursor
+PROMPT: Cover all TestUi app pages with modular suite XMLs
+ACCEPTED-BY: vignesh
+-->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestUi-users-integration" verbose="1">
+    <listeners>
+        <listener class-name="com.testui.selenium.listeners.TestListener"/>
+    </listeners>
+    <parameter name="baseUrl" value="http://localhost:5173"/>
+    <parameter name="browser" value="chrome"/>
+    <test name="Integration">
+        <parameter name="email" value="admin@gmail.com"/>
+        <parameter name="password" value="admin@123"/>
+        <parameter name="captcha" value="TEST"/>
+        <parameter name="userName" value="Ada Lovelace"/>
+        <parameter name="userEmail" value="ada.lovelace@testui.com"/>
+        <parameter name="userDepartment" value="Engineering"/>
+        <parameter name="userPhone" value="555-0101"/>
+        <parameter name="searchQuery" value="a"/>
+        <classes>
+            <class name="com.testui.selenium.tests.UsersTest">
+                <methods>
+                    <include name="navigateToUsers"/>
+                    <include name="createUser"/>
+                    <include name="cancelAddUserLeavesTableUnchanged"/>
+                    <include name="usersPageUiElementsVisible"/>
+                    <include name="usersPageAccessibilityHooksPresent"/>
+                    <include name="e2eLoginNavigateSearchUsers"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

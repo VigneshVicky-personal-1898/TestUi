@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+AI-ASSISTED: Cursor
+PROMPT: Create TestUi Playwright Java Maven POM with TestNG framework
+ACCEPTED-BY: vignesh
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.testui</groupId>
+    <artifactId>testui-playwright-java</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>TestUi Playwright Java Framework</name>
+    <description>Enterprise Playwright + TestNG + POM automation framework for TestUi</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>17</maven.compiler.release>
+        <playwright.version>1.49.0</playwright.version>
+        <testng.version>7.10.2</testng.version>
+        <extentreports.version>5.1.2</extentreports.version>
+        <log4j.version>2.24.3</log4j.version>
+        <jackson.version>2.18.2</jackson.version>
+        <suiteXmlFile>src/test/resources/suites/smoke.xml</suiteXmlFile>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.microsoft.playwright</groupId>
+            <artifactId>playwright</artifactId>
+            <version>${playwright.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${extentreports.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <release>${maven.compiler.release}</release>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.2</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <systemPropertyVariables>
+                        <baseUrl>${baseUrl}</baseUrl>
+                        <browser>${browser}</browser>
+                        <headless>${headless}</headless>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>smoke</id>
+            <properties>
+                <suiteXmlFile>src/test/resources/suites/smoke.xml</suiteXmlFile>
+            </properties>
+        </profile>
+        <profile>
+            <id>regression</id>
+            <properties>
+                <suiteXmlFile>src/test/resources/suites/regression.xml</suiteXmlFile>
+            </properties>
+        </profile>
+        <profile>
+            <id>parallel</id>
+            <properties>
+                <suiteXmlFile>src/test/resources/suites/parallel.xml</suiteXmlFile>
+            </properties>
+        </profile>
+    </profiles>
+</project>

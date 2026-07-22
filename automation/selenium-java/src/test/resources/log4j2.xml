@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+AI-ASSISTED: Cursor
+PROMPT: Clean console layout; file keeps full logs, suppress noisy logger names
+ACCEPTED-BY: vignesh
+-->
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Quiet console: framework noise only; suite/test UX prints via AnsiConsole -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss} %highlight{%-5level}{FATAL=red bold, ERROR=red, WARN=yellow, INFO=cyan, DEBUG=green} %msg%n"
+                           disableAnsi="false"/>
+            <ThresholdFilter level="WARN" onMatch="ACCEPT" onMismatch="DENY"/>
+        </Console>
+        <RollingFile name="File"
+                     fileName="src/test/resources/logs/testui-selenium.log"
+                     filePattern="src/test/resources/logs/testui-selenium-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="5"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <!-- Test listener file trail without duplicating pretty console lines -->
+        <Logger name="TESTUI_FILE" level="info" additivity="false">
+            <AppenderRef ref="File"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+        </Root>
+    </Loggers>
+</Configuration>

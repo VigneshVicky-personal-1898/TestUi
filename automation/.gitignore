@@ -1,0 +1,10 @@
+# AI-ASSISTED: Cursor
+# PROMPT: Keep automation run artifacts trackable in git
+# ACCEPTED-BY: vignesh
+.m2/
+
+# Persist TestUI runner outputs (logs, reports, screenshots per run)
+# These are committed when RUNNER_GIT_SYNC=true on the deploy host.
+!runs/
+!runs/**
+runs/**/surefire/*.txt

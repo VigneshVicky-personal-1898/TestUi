@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+AI-ASSISTED: Cursor
+PROMPT: Cover all TestUi app pages with modular suite XMLs
+ACCEPTED-BY: vignesh
+-->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestUi-App-Sanity" verbose="1">
+    <listeners>
+        <listener class-name="com.testui.selenium.listeners.TestListener"/>
+    </listeners>
+    <parameter name="baseUrl" value="http://localhost:5173"/>
+    <parameter name="browser" value="chrome"/>
+    <test name="App-Sanity">
+        <parameter name="email" value="admin@gmail.com"/>
+        <parameter name="password" value="admin@123"/>
+        <parameter name="captcha" value="TEST"/>
+        <classes>
+            <class name="com.testui.selenium.tests.ForgotPasswordTest">
+                <methods>
+                    <include name="pageLoads"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.OtpTest">
+                <methods>
+                    <include name="pageLoads"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.MfaTest">
+                <methods>
+                    <include name="pageLoads"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.ProductsTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.OrdersTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.FormsTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.TablesTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.TreeTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.WorkflowTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.ReportsTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.NotificationsTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.CalendarTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.FilesTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.EcommerceShopTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.EcommerceCartTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.EcommerceWishlistTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.EcommerceCheckoutTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.SearchTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.SettingsTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.DashboardLiveTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.FormsAdvancedTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.AdvancedUiTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.EnterpriseTablesTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.ChartsGalleryTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.CanvasLabTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.UploadsTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.DownloadsTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.AuthAdvancedTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.ApiSimTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.StorageTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.BrowserApisTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.AdminTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.A11yLabTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.PerformanceTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.NetworkTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.ErrorsIndexTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.Error404Test">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.Error403Test">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.Error500Test">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.EmptyStateTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.NoDataTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.AiTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.AutomationLabTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.PlaygroundTest">
+                <methods>
+                    <include name="pageLoadsAfterLogin"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.LoginTest">
+                <methods>
+                    <include name="adminLoginSuccess"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.DashboardTest">
+                <methods>
+                    <include name="dashboardWidgetsVisible"/>
+                </methods>
+            </class>
+            <class name="com.testui.selenium.tests.UsersTest">
+                <methods>
+                    <include name="navigateToUsers"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

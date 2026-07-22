@@ -1,0 +1,110 @@
+/* AI-ASSISTED: Cursor
+   PROMPT: Clean Soft UI CSS tokens with muted teal accent
+   ACCEPTED-BY: vignesh */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --neu-bg: #f0f2f5;
+  --neu-surface: #f0f2f5;
+  --neu-text: #374151;
+  --neu-muted: #6b7280;
+  --neu-accent: #0d9488;
+  --neu-accent-soft: rgba(13, 148, 136, 0.12);
+  --neu-shadow-dark: #d5dae0;
+  --neu-shadow-light: #ffffff;
+  --neu-raised: 4px 4px 10px var(--neu-shadow-dark), -4px -4px 10px var(--neu-shadow-light);
+  --neu-raised-sm: 2px 2px 6px var(--neu-shadow-dark), -2px -2px 6px var(--neu-shadow-light);
+  --neu-inset: inset 2px 2px 6px var(--neu-shadow-dark), inset -2px -2px 6px var(--neu-shadow-light);
+  --neu-inset-sm: inset 1px 1px 4px var(--neu-shadow-dark), inset -1px -1px 4px var(--neu-shadow-light);
+  --neu-radius: 12px;
+}
+
+[data-mui-color-scheme='dark'],
+.dark-neu {
+  --neu-bg: #1e293b;
+  --neu-surface: #1e293b;
+  --neu-text: #e2e8f0;
+  --neu-muted: #94a3b8;
+  --neu-accent: #2dd4bf;
+  --neu-accent-soft: rgba(45, 212, 191, 0.14);
+  --neu-shadow-dark: #111827;
+  --neu-shadow-light: #2a3a52;
+  --neu-raised: 4px 4px 10px var(--neu-shadow-dark), -4px -4px 10px var(--neu-shadow-light);
+  --neu-raised-sm: 2px 2px 6px var(--neu-shadow-dark), -2px -2px 6px var(--neu-shadow-light);
+  --neu-inset: inset 2px 2px 6px var(--neu-shadow-dark), inset -2px -2px 6px var(--neu-shadow-light);
+  --neu-inset-sm: inset 1px 1px 4px var(--neu-shadow-dark), inset -1px -1px 4px var(--neu-shadow-light);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Nunito', 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: var(--neu-bg);
+  color: var(--neu-text);
+}
+
+.neu-raised {
+  background: var(--neu-surface);
+  box-shadow: var(--neu-raised);
+  border-radius: var(--neu-radius);
+  border: none;
+}
+
+.neu-raised-sm {
+  background: var(--neu-surface);
+  box-shadow: var(--neu-raised-sm);
+  border-radius: 10px;
+  border: none;
+}
+
+.neu-inset {
+  background: var(--neu-surface);
+  box-shadow: var(--neu-inset);
+  border-radius: var(--neu-radius);
+  border: none;
+}
+
+.neu-inset-sm {
+  background: var(--neu-surface);
+  box-shadow: var(--neu-inset-sm);
+  border-radius: 10px;
+  border: none;
+}
+
+.markdown-body pre {
+  background: rgba(15, 23, 42, 0.9);
+  padding: 8px 12px;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 4px 8px;
+  text-align: left;
+}
+
+.markdown-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+}

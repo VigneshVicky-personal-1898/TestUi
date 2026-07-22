@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+AI-ASSISTED: Cursor
+PROMPT: Outer frame with stable ids/names for nested frame automation
+ACCEPTED-BY: vignesh
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Outer Frame</title>
+  <style>
+    body { font-family: sans-serif; margin: 12px; background: #e3f2fd; }
+    h3 { margin-top: 0; }
+    iframe { width: 100%; height: 160px; border: 2px solid #0d47a1; border-radius: 6px; background: #fff; }
+  </style>
+</head>
+<body id="outer-frame-body" data-testid="outer-frame-body">
+  <h3 id="outer-frame-title" data-testid="outer-frame-title">Outer Frame</h3>
+  <p id="outer-frame-description" data-testid="outer-frame-description">This is the parent iframe. Nested frame below:</p>
+  <input
+    type="text"
+    id="outer-frame-input"
+    name="outer-frame-input"
+    data-testid="outer-frame-input"
+    placeholder="Outer frame input"
+  />
+  <br /><br />
+  <iframe
+    title="inner-frame"
+    name="inner-frame"
+    id="inner-frame"
+    data-testid="inner-frame"
+    src="/automation/inner-frame.html"
+  ></iframe>
+</body>
+</html>

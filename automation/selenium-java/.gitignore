@@ -1,0 +1,14 @@
+# AI-ASSISTED: Cursor
+# PROMPT: Create TestUi automation Maven project gitignores
+# ACCEPTED-BY: vignesh
+target/
+reports/*.html
+src/test/resources/screenshots/*.png
+src/test/resources/logs/*.log
+src/test/resources/logs/*.gz
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+downloads/

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Ada Lovelace",
+    "email": "ada.lovelace@testui.com",
+    "department": "Engineering",
+    "phone": "555-0101"
+  },
+  {
+    "name": "Grace Hopper",
+    "email": "grace.hopper@testui.com",
+    "department": "R&D",
+    "phone": "555-0102"
+  }
+]

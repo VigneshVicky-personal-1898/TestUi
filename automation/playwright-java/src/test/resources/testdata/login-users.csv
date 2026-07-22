@@ -1,0 +1,5 @@
+email,password,captcha,expected
+admin@gmail.com,admin@123,TEST,success
+admin@gmail.com,wrongpass,TEST,failure
+viewer@testui.com,Viewer@123,TEST,success
+invalid@testui.com,bad,TEST,failure
