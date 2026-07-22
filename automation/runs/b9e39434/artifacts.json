@@ -1,0 +1,278 @@
+{
+  "reports": [
+    {
+      "name": "ExtentReport_20260722_144310.html",
+      "kind": "stored-report",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=reports&file=ExtentReport_20260722_144310.html"
+    },
+    {
+      "name": "ExtentReport_20260722_142356.html",
+      "kind": "stored-report",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=reports&file=ExtentReport_20260722_142356.html"
+    },
+    {
+      "name": "ExtentReport_20260722_135425.html",
+      "kind": "stored-report",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=reports&file=ExtentReport_20260722_135425.html"
+    },
+    {
+      "name": "ExtentReport_20260722_135402.html",
+      "kind": "stored-report",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=reports&file=ExtentReport_20260722_135402.html"
+    },
+    {
+      "name": "ExtentReport_20260722_134921.html",
+      "kind": "stored-report",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=reports&file=ExtentReport_20260722_134921.html"
+    },
+    {
+      "name": "ExtentReport_20260722_131953.html",
+      "kind": "stored-report",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=reports&file=ExtentReport_20260722_131953.html"
+    },
+    {
+      "name": "ExtentReport_20260722_131716.html",
+      "kind": "stored-report",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=reports&file=ExtentReport_20260722_131716.html"
+    },
+    {
+      "name": "ExtentReport_20260722_131339.html",
+      "kind": "stored-report",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=reports&file=ExtentReport_20260722_131339.html"
+    },
+    {
+      "name": "ExtentReport_20260722_131122.html",
+      "kind": "stored-report",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=reports&file=ExtentReport_20260722_131122.html"
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "pageLoadsAfterLogin_20260722_151921_438.png",
+      "kind": "stored-screenshot",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=screenshots&file=pageLoadsAfterLogin_20260722_151921_438.png"
+    },
+    {
+      "name": "pageLoadsAfterLogin_20260722_151912_426.png",
+      "kind": "stored-screenshot",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=screenshots&file=pageLoadsAfterLogin_20260722_151912_426.png"
+    },
+    {
+      "name": "pageLoadsAfterLogin_20260722_151902_480.png",
+      "kind": "stored-screenshot",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=screenshots&file=pageLoadsAfterLogin_20260722_151902_480.png"
+    },
+    {
+      "name": "pageLoadsAfterLogin_20260722_151852_836.png",
+      "kind": "stored-screenshot",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=screenshots&file=pageLoadsAfterLogin_20260722_151852_836.png"
+    },
+    {
+      "name": "pageLoadsAfterLogin_20260722_151844_089.png",
+      "kind": "stored-screenshot",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=screenshots&file=pageLoadsAfterLogin_20260722_151844_089.png"
+    },
+    {
+      "name": "pageLoadsAfterLogin_20260722_151835_250.png",
+      "kind": "stored-screenshot",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=screenshots&file=pageLoadsAfterLogin_20260722_151835_250.png"
+    },
+    {
+      "name": "pageLoads_20260722_151615_285.png",
+      "kind": "stored-screenshot",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=screenshots&file=pageLoads_20260722_151615_285.png"
+    },
+    {
+      "name": "loginWithInvalidCredentials_20260722_131141_427.png",
+      "kind": "stored-screenshot",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=screenshots&file=loginWithInvalidCredentials_20260722_131141_427.png"
+    },
+    {
+      "name": "invalidPasswordShowsError_20260722_131139_121.png",
+      "kind": "stored-screenshot",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=screenshots&file=invalidPasswordShowsError_20260722_131139_121.png"
+    },
+    {
+      "name": "e2eAdminLoginToDashboard_20260722_131136_705.png",
+      "kind": "stored-screenshot",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=screenshots&file=e2eAdminLoginToDashboard_20260722_131136_705.png"
+    },
+    {
+      "name": "loginWithValidCredentials_20260722_131130_310.png",
+      "kind": "stored-screenshot",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=screenshots&file=loginWithValidCredentials_20260722_131130_310.png"
+    },
+    {
+      "name": "fillDemoAdminChip_20260722_131127_888.png",
+      "kind": "stored-screenshot",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=screenshots&file=fillDemoAdminChip_20260722_131127_888.png"
+    },
+    {
+      "name": "adminLoginSuccess_20260722_131125_149.png",
+      "kind": "stored-screenshot",
+      "url": "/api/runner/stored-artifact?runId=b9e39434&kind=screenshots&file=adminLoginSuccess_20260722_131125_149.png"
+    }
+  ],
+  "surefire": [],
+  "live": {
+    "reports": [
+      {
+        "name": "ExtentReport_20260722_144310.html",
+        "kind": "report",
+        "size": 35005,
+        "modified": 1784711642000,
+        "url": "/api/runner/artifact?framework=selenium&kind=report&file=ExtentReport_20260722_144310.html"
+      },
+      {
+        "name": "ExtentReport_20260722_142356.html",
+        "kind": "report",
+        "size": 16767,
+        "modified": 1784710452000,
+        "url": "/api/runner/artifact?framework=selenium&kind=report&file=ExtentReport_20260722_142356.html"
+      },
+      {
+        "name": "ExtentReport_20260722_135425.html",
+        "kind": "report",
+        "size": 35005,
+        "modified": 1784708694000,
+        "url": "/api/runner/artifact?framework=selenium&kind=report&file=ExtentReport_20260722_135425.html"
+      },
+      {
+        "name": "ExtentReport_20260722_135402.html",
+        "kind": "report",
+        "size": 16767,
+        "modified": 1784708650000,
+        "url": "/api/runner/artifact?framework=selenium&kind=report&file=ExtentReport_20260722_135402.html"
+      },
+      {
+        "name": "ExtentReport_20260722_134921.html",
+        "kind": "report",
+        "size": 38201,
+        "modified": 1784708390000,
+        "url": "/api/runner/artifact?framework=selenium&kind=report&file=ExtentReport_20260722_134921.html"
+      },
+      {
+        "name": "ExtentReport_20260722_131953.html",
+        "kind": "report",
+        "size": 17551,
+        "modified": 1784706602000,
+        "url": "/api/runner/artifact?framework=selenium&kind=report&file=ExtentReport_20260722_131953.html"
+      },
+      {
+        "name": "ExtentReport_20260722_131716.html",
+        "kind": "report",
+        "size": 25996,
+        "modified": 1784706464000,
+        "url": "/api/runner/artifact?framework=selenium&kind=report&file=ExtentReport_20260722_131716.html"
+      },
+      {
+        "name": "ExtentReport_20260722_131339.html",
+        "kind": "report",
+        "size": 13011,
+        "modified": 1784706226000,
+        "url": "/api/runner/artifact?framework=selenium&kind=report&file=ExtentReport_20260722_131339.html"
+      },
+      {
+        "name": "ExtentReport_20260722_131122.html",
+        "kind": "report",
+        "size": 4371171,
+        "modified": 1784706102000,
+        "url": "/api/runner/artifact?framework=selenium&kind=report&file=ExtentReport_20260722_131122.html"
+      }
+    ],
+    "screenshots": [
+      {
+        "name": "pageLoadsAfterLogin_20260722_151921_438.png",
+        "kind": "screenshot",
+        "size": 38038,
+        "modified": 1784713760000,
+        "url": "/api/runner/artifact?framework=selenium&kind=screenshot&file=pageLoadsAfterLogin_20260722_151921_438.png"
+      },
+      {
+        "name": "pageLoadsAfterLogin_20260722_151912_426.png",
+        "kind": "screenshot",
+        "size": 40480,
+        "modified": 1784713752000,
+        "url": "/api/runner/artifact?framework=selenium&kind=screenshot&file=pageLoadsAfterLogin_20260722_151912_426.png"
+      },
+      {
+        "name": "pageLoadsAfterLogin_20260722_151902_480.png",
+        "kind": "screenshot",
+        "size": 49401,
+        "modified": 1784713742000,
+        "url": "/api/runner/artifact?framework=selenium&kind=screenshot&file=pageLoadsAfterLogin_20260722_151902_480.png"
+      },
+      {
+        "name": "pageLoadsAfterLogin_20260722_151852_836.png",
+        "kind": "screenshot",
+        "size": 44278,
+        "modified": 1784713732000,
+        "url": "/api/runner/artifact?framework=selenium&kind=screenshot&file=pageLoadsAfterLogin_20260722_151852_836.png"
+      },
+      {
+        "name": "pageLoadsAfterLogin_20260722_151844_089.png",
+        "kind": "screenshot",
+        "size": 43867,
+        "modified": 1784713724000,
+        "url": "/api/runner/artifact?framework=selenium&kind=screenshot&file=pageLoadsAfterLogin_20260722_151844_089.png"
+      },
+      {
+        "name": "pageLoadsAfterLogin_20260722_151835_250.png",
+        "kind": "screenshot",
+        "size": 36392,
+        "modified": 1784713714000,
+        "url": "/api/runner/artifact?framework=selenium&kind=screenshot&file=pageLoadsAfterLogin_20260722_151835_250.png"
+      },
+      {
+        "name": "pageLoads_20260722_151615_285.png",
+        "kind": "screenshot",
+        "size": 2122,
+        "modified": 1784713574000,
+        "url": "/api/runner/artifact?framework=selenium&kind=screenshot&file=pageLoads_20260722_151615_285.png"
+      },
+      {
+        "name": "loginWithInvalidCredentials_20260722_131141_427.png",
+        "kind": "screenshot",
+        "size": 537613,
+        "modified": 1784706100000,
+        "url": "/api/runner/artifact?framework=selenium&kind=screenshot&file=loginWithInvalidCredentials_20260722_131141_427.png"
+      },
+      {
+        "name": "invalidPasswordShowsError_20260722_131139_121.png",
+        "kind": "screenshot",
+        "size": 537613,
+        "modified": 1784706098000,
+        "url": "/api/runner/artifact?framework=selenium&kind=screenshot&file=invalidPasswordShowsError_20260722_131139_121.png"
+      },
+      {
+        "name": "e2eAdminLoginToDashboard_20260722_131136_705.png",
+        "kind": "screenshot",
+        "size": 537613,
+        "modified": 1784706096000,
+        "url": "/api/runner/artifact?framework=selenium&kind=screenshot&file=e2eAdminLoginToDashboard_20260722_131136_705.png"
+      },
+      {
+        "name": "loginWithValidCredentials_20260722_131130_310.png",
+        "kind": "screenshot",
+        "size": 537613,
+        "modified": 1784706090000,
+        "url": "/api/runner/artifact?framework=selenium&kind=screenshot&file=loginWithValidCredentials_20260722_131130_310.png"
+      },
+      {
+        "name": "fillDemoAdminChip_20260722_131127_888.png",
+        "kind": "screenshot",
+        "size": 541689,
+        "modified": 1784706086000,
+        "url": "/api/runner/artifact?framework=selenium&kind=screenshot&file=fillDemoAdminChip_20260722_131127_888.png"
+      },
+      {
+        "name": "adminLoginSuccess_20260722_131125_149.png",
+        "kind": "screenshot",
+        "size": 537613,
+        "modified": 1784706084000,
+        "url": "/api/runner/artifact?framework=selenium&kind=screenshot&file=adminLoginSuccess_20260722_131125_149.png"
+      }
+    ],
+    "surefire": []
+  }
+}
