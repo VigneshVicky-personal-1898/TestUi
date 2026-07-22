@@ -1,0 +1,22 @@
+{
+  "id": "b9e39434",
+  "framework": "selenium",
+  "status": "failed",
+  "command": "mvn test -B -DsuiteXmlFile=src/test/resources/suites/invalid.xml -Dbrowser=chrome -Dheadless=false -DbaseUrl=http://localhost:5173",
+  "suiteXmlFile": "src/test/resources/suites/invalid.xml",
+  "profile": null,
+  "settings": {
+    "browser": "chrome",
+    "headless": false,
+    "baseUrl": "http://localhost:5173",
+    "gitSync": false
+  },
+  "startedAt": 1784724859839,
+  "finishedAt": 1784724860003,
+  "exitCode": -4058,
+  "error": "spawn mvn ENOENT",
+  "logCount": 8,
+  "storedAt": 1784724860009,
+  "repoRelativePath": "automation\\runs\\b9e39434",
+  "git": null
+}
