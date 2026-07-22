@@ -1,0 +1,42 @@
+[
+  {
+    "t": 1784724840489,
+    "stream": "system",
+    "line": "[runner] Working directory: automation\\selenium-java"
+  },
+  {
+    "t": 1784724840489,
+    "stream": "system",
+    "line": "[runner] Mode: headless · browser=chrome · baseUrl=http://localhost:5173"
+  },
+  {
+    "t": 1784724840489,
+    "stream": "system",
+    "line": "[runner] mvn test -B -DsuiteXmlFile=src/test/resources/suites/valid.xml -Dbrowser=chrome -Dheadless=true -DbaseUrl=http://localhost:5173"
+  },
+  {
+    "t": 1784724840489,
+    "stream": "system",
+    "line": "[runner] Results will be stored under automation/runs/7d5e0b33"
+  },
+  {
+    "t": 1784724840500,
+    "stream": "system",
+    "line": "[runner] Failed to start Maven: spawn mvn ENOENT"
+  },
+  {
+    "t": 1784724840631,
+    "stream": "system",
+    "line": "[runner] Artifacts saved to automation\\runs\\7d5e0b33"
+  },
+  {
+    "t": 1784724840632,
+    "stream": "system",
+    "line": "[git] Syncing run artifacts to git repository…"
+  },
+  {
+    "t": 1784724840655,
+    "stream": "system",
+    "line": "[runner] Process exited with code -4058"
+  }
+]

@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": "7d5e0b33",
+    "framework": "selenium",
+    "status": "failed",
+    "startedAt": 1784724840489,
+    "finishedAt": 1784724840652,
+    "suiteXmlFile": "src/test/resources/suites/valid.xml",
+    "path": "automation\\runs\\7d5e0b33",
+    "settings": {
+      "browser": "chrome",
+      "headless": true,
+      "baseUrl": "http://localhost:5173",
+      "gitSync": true
+    }
+  }
+]

@@ -1,0 +1,8 @@
+[2026-07-22T12:54:00.489Z] [system] [runner] Working directory: automation\selenium-java
+[2026-07-22T12:54:00.489Z] [system] [runner] Mode: headless · browser=chrome · baseUrl=http://localhost:5173
+[2026-07-22T12:54:00.489Z] [system] [runner] mvn test -B -DsuiteXmlFile=src/test/resources/suites/valid.xml -Dbrowser=chrome -Dheadless=true -DbaseUrl=http://localhost:5173
+[2026-07-22T12:54:00.489Z] [system] [runner] Results will be stored under automation/runs/7d5e0b33
+[2026-07-22T12:54:00.500Z] [system] [runner] Failed to start Maven: spawn mvn ENOENT
+[2026-07-22T12:54:00.631Z] [system] [runner] Artifacts saved to automation\runs\7d5e0b33
+[2026-07-22T12:54:00.632Z] [system] [git] Syncing run artifacts to git repository…
+[2026-07-22T12:54:00.655Z] [system] [runner] Process exited with code -4058
