@@ -1,8 +1,8 @@
 package com.testui.selenium.utils;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Create TestUi Selenium Java Maven POM with TestNG framework
-// ACCEPTED-BY: vignesh
+
+//  Create TestUi Selenium Java Maven POM with TestNG framework
+
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

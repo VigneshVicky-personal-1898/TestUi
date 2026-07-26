@@ -1,8 +1,8 @@
 package com.testui.selenium.dataproviders;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Split login CSV into valid and invalid data providers
-// ACCEPTED-BY: vignesh
+
+//  Split login CSV into valid and invalid data providers
+
 
 import com.testui.selenium.utils.DataReader;
 import org.testng.annotations.DataProvider;

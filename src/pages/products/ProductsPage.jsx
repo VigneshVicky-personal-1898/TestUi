@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Migrate ProductsPage interactive elements to automation helpers
-// ACCEPTED-BY: vignesh
+
+//  Migrate ProductsPage interactive elements to automation helpers
+
 import { useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {

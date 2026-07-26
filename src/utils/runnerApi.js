@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Runner client helpers with source file fetch for structure tab
-// ACCEPTED-BY: vignesh
+
+//  Runner client helpers with source file fetch for structure tab
+
 
 
 const BASE = '/api/runner'

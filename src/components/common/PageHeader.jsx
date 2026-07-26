@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Clean Soft UI PageHeader without heavy raised chrome
-// ACCEPTED-BY: vignesh
+
+//  Clean Soft UI PageHeader without heavy raised chrome
+
 import { Navigate, useLocation, Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { Box, Typography, Breadcrumbs, Link as MuiLink, useTheme } from '@mui/material'

@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Optional git commit/push of automation run artifacts to repo
-// ACCEPTED-BY: vignesh
+
+//  Optional git commit/push of automation run artifacts to repo
+
 import { spawn } from 'node:child_process'
 import path from 'node:path'
 import { ROOT } from './catalog.js'

@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Add pageId so Automation Help appears on Error Pages
-// ACCEPTED-BY: vignesh
+
+//  Add pageId so Automation Help appears on Error Pages
+
 import { Link as RouterLink, Routes, Route, useNavigate } from 'react-router-dom'
 import { Box, Typography, Button, Paper, Stack } from '@mui/material'
 import ErrorOutlinedIcon from '@mui/icons-material/ErrorOutlined'

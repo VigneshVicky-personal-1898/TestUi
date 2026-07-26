@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Charts gallery: bar pie donut line area radar scatter gauge + export
-// ACCEPTED-BY: vignesh
+
+//  Charts gallery: bar pie donut line area radar scatter gauge + export
+
 
 import { Box, Paper, Grid, Typography, Button, Stack } from '@mui/material'
 import {

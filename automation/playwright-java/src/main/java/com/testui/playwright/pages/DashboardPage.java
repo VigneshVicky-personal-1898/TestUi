@@ -1,8 +1,6 @@
 package com.testui.playwright.pages;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Create TestUi Playwright Java Maven POM with TestNG framework
-// ACCEPTED-BY: vignesh
+
 
 import com.microsoft.playwright.Locator;
 import com.testui.playwright.core.BasePage;

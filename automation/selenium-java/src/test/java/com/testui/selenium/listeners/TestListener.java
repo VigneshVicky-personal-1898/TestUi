@@ -1,8 +1,8 @@
 package com.testui.selenium.listeners;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Colored clean console logs without class names
-// ACCEPTED-BY: vignesh
+
+//  Colored clean console logs without class names
+
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;

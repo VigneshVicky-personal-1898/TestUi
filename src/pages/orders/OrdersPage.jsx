@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Migrate OrdersPage interactive elements to automation helpers
-// ACCEPTED-BY: vignesh
+
+//  Migrate OrdersPage interactive elements to automation helpers
+
 import { useState, Fragment } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {

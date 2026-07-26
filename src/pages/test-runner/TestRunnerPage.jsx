@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Default runner baseUrl includes Vite base path (local + GH Pages)
-// ACCEPTED-BY: vignesh
+
+//  Remove Framework Structure tab; keep run/logs/reports only
+
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
  Alert, Box, Button, Card, CardContent, Chip, CircularProgress, FormControl,
@@ -13,7 +13,6 @@ import StopIcon from '@mui/icons-material/Stop'
 import RefreshIcon from '@mui/icons-material/Refresh'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import { PageHeader } from '../../components/common/PageHeader'
-import FrameworkStructurePanel from './FrameworkStructurePanel'
 import { runnerApi } from '../../utils/runnerApi'
 import { getViteBaseUrl } from '../../config/appBase'
 import { aid, btn, select, option, field, dyn, optId } from '../../utils/automation'
@@ -41,7 +40,6 @@ export default function TestRunnerPage() {
  const [apiOk, setApiOk] = useState(null)
  const [framework, setFramework] = useState('selenium')
  const [catalog, setCatalog] = useState(null)
- const [structure, setStructure] = useState(null)
  const [artifacts, setArtifacts] = useState({ reports: [], screenshots: [], surefire: [] })
  const [suiteMode, setSuiteMode] = useState('application')
  const [selectedSuite, setSelectedSuite] = useState('')
@@ -78,21 +76,20 @@ export default function TestRunnerPage() {
    try {
      await runnerApi.health()
      setApiOk(true)
-     const [cat, struct, arts, runs, cfg] = await Promise.all([
+     const [cat, arts, runs, cfg] = await Promise.all([
        runnerApi.catalog(fw),
-       runnerApi.structure(fw),
        runnerApi.artifacts(fw),
        runnerApi.runs(),
        runnerApi.config().catch(() => null),
      ])
      setCatalog(cat)
-     setStructure(struct)
      setArtifacts(arts)
      setHistory(runs.runs || [])
      if (cfg) {
        setRunnerConfig(cfg)
        setGitSync(Boolean(cfg.gitSync?.enabled))
-     }      const firstApp = cat.applicationSuites?.[0]?.relativePath || ''
+     }
+     const firstApp = cat.applicationSuites?.[0]?.relativePath || ''
      setSelectedSuite((prev) => prev || firstApp)
      if (fw === 'selenium' && cat.modules?.length) {
        setModuleName((prev) => prev || cat.modules[0])
@@ -203,7 +200,7 @@ export default function TestRunnerPage() {
      <PageHeader
        pageId="test-runner"
        title="Automation Test Runner"
-       subtitle="Execute Selenium / Playwright TestNG suites from TestUi — view logs, reports, screenshots, and framework structure"
+       subtitle="Execute Selenium / Playwright TestNG suites from TestUi — view live logs, reports, and screenshots"
        breadcrumbs={['Test Runner']}
        actions={(
          <Button
@@ -254,7 +251,6 @@ export default function TestRunnerPage() {
        <Tab label="Configure & Run" {...btn('runner-tab-configure', 'Configure and run')} />
        <Tab label="Live Logs" {...btn('runner-tab-logs', 'Live logs')} />
        <Tab label="Reports & Screenshots" {...btn('runner-tab-artifacts', 'Reports and screenshots')} />
-       <Tab label="Framework Structure" {...btn('runner-tab-structure', 'Framework structure')} />
      </Tabs>
 
 
@@ -680,13 +676,6 @@ export default function TestRunnerPage() {
            </Card>
          </Grid>
        </Grid>
-     )}
-     {tab === 3 && (
-       <FrameworkStructurePanel
-         framework={framework}
-         structure={structure}
-         catalog={catalog}
-       />
      )}
    </Box>
  )

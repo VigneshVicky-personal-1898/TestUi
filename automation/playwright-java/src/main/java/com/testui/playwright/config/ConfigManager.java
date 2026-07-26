@@ -1,8 +1,6 @@
 package com.testui.playwright.config;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Create TestUi Playwright Java Maven POM with TestNG framework
-// ACCEPTED-BY: vignesh
+
 
 import com.testui.playwright.constants.FrameworkConstants;
 import org.apache.logging.log4j.LogManager;

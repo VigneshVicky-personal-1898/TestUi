@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Scan Selenium/Playwright projects for suites classes structure
-// ACCEPTED-BY: vignesh
+
+//  Folder-based suite/Java discovery with correct relative paths
+
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -109,30 +109,80 @@ function parseJavaMeta(filePath, packageRoot) {
 }
 
 
-function listXmlSuites(dir, baseLabel = '') {
- if (!fs.existsSync(dir)) return []
+/**
+* Recursively list TestNG suite XMLs under `dir`.
+* `relativePath` is always relative to the project `suitesRoot` so it matches
+* real disk paths (e.g. suites/application/smoke.xml, suites/modules/login/smoke.xml).
+* `category` / `label` stay relative to the scanned folder for UI grouping.
+*/
+function listXmlSuites(dir, suitesRoot, baseLabel = '') {
+ if (!fs.existsSync(dir) || !fs.existsSync(suitesRoot)) return []
  const suites = []
- const walk = (current, relParts = []) => {
+ const walk = (current) => {
    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
      const full = path.join(current, entry.name)
      if (entry.isDirectory()) {
-       walk(full, [...relParts, entry.name])
+       walk(full)
      } else if (entry.name.endsWith('.xml')) {
-       const rel = path.relative(dir, full).split(path.sep).join('/')
-       const suiteRel = path.join('src/test/resources/suites', rel).split(path.sep).join('/')
-       const parts = rel.replace(/\.xml$/, '').split('/')
+       const relFromRoot = path.relative(suitesRoot, full).split(path.sep).join('/')
+       const relFromScan = path.relative(dir, full).split(path.sep).join('/')
+       if (relFromRoot.startsWith('..')) continue
+       const suiteRel = path.join('src/test/resources/suites', relFromRoot).split(path.sep).join('/')
+       const parts = relFromScan.replace(/\.xml$/, '').split('/').filter(Boolean)
        suites.push({
-         id: `${baseLabel}${rel}`.replace(/[/.]/g, '-'),
-         name: parts[parts.length - 1],
+         id: `${baseLabel}${relFromRoot}`.replace(/[/.]/g, '-'),
+         name: parts[parts.length - 1] || path.basename(entry.name, '.xml'),
          category: parts.length > 1 ? parts.slice(0, -1).join('/') : 'root',
          relativePath: suiteRel,
+         folderPath: relFromRoot.includes('/')
+           ? relFromRoot.slice(0, relFromRoot.lastIndexOf('/'))
+           : '',
          label: parts.join(' / '),
        })
      }
    }
  }
  walk(dir)
- return suites.sort((a, b) => a.label.localeCompare(b.label))
+ return suites.sort((a, b) => a.relativePath.localeCompare(b.relativePath))
+}
+
+
+/** Dynamically discover first-level package folders under main/test src. */
+function discoverPackages(fw) {
+ const packages = {}
+ const addSection = (key, dir, pkg) => {
+   if (!fs.existsSync(dir)) {
+     packages[key] = packages[key] || []
+     return
+   }
+   packages[key] = listJavaFiles(dir).map((f) => parseJavaMeta(f, pkg))
+ }
+
+
+ if (fs.existsSync(fw.mainSrc)) {
+   for (const entry of fs.readdirSync(fw.mainSrc, { withFileTypes: true })) {
+     if (!entry.isDirectory()) continue
+     addSection(entry.name, path.join(fw.mainSrc, entry.name), `${fw.packageRoot}.${entry.name}`)
+   }
+ }
+ if (fs.existsSync(fw.testSrc)) {
+   for (const entry of fs.readdirSync(fw.testSrc, { withFileTypes: true })) {
+     if (!entry.isDirectory()) continue
+     addSection(entry.name, path.join(fw.testSrc, entry.name), `${fw.packageRoot}.${entry.name}`)
+   }
+ }
+
+
+ // Playwright may keep browser manager under a different folder name
+ if (!packages.driver?.length) {
+   const alt = listJavaFiles(fw.mainSrc).filter((f) => /Manager|Factory|Driver|Browser/i.test(path.basename(f)))
+   if (alt.length) {
+     packages.driver = alt.map((f) => parseJavaMeta(f, fw.packageRoot))
+   }
+ }
+
+
+ return packages
 }
 
 
@@ -181,52 +231,57 @@ export function buildCatalog(frameworkId) {
  }
 
 
- const applicationSuites = fw.id === 'selenium'
-   ? listXmlSuites(path.join(fw.suitesRoot, 'application'), 'app-')
-   : listXmlSuites(fw.suitesRoot, 'root-')
+ // Folder-based discovery only — whatever exists under suites/ is what the UI shows.
+ const applicationDir = path.join(fw.suitesRoot, 'application')
+ const modulesDir = path.join(fw.suitesRoot, 'modules')
+ const hasApplicationFolder = fs.existsSync(applicationDir)
+ const hasModulesFolder = fw.id === 'selenium' && fs.existsSync(modulesDir)
 
 
- const moduleSuites = fw.id === 'selenium'
-   ? listXmlSuites(path.join(fw.suitesRoot, 'modules'), 'mod-')
+ let applicationSuites
+ if (fw.id === 'selenium' && hasApplicationFolder) {
+   applicationSuites = listXmlSuites(applicationDir, fw.suitesRoot, 'app-')
+   // Root-level suite XMLs that sit beside application/ and modules/ (not nested folders)
+   const rootLevel = []
+   for (const entry of fs.readdirSync(fw.suitesRoot, { withFileTypes: true })) {
+     if (!entry.isFile() || !entry.name.endsWith('.xml')) continue
+     const relFromRoot = entry.name
+     const name = path.basename(entry.name, '.xml')
+     rootLevel.push({
+       id: `root-${relFromRoot}`.replace(/[/.]/g, '-'),
+       name,
+       category: 'root',
+       relativePath: path.join('src/test/resources/suites', relFromRoot).split(path.sep).join('/'),
+       folderPath: '',
+       label: name,
+     })
+   }
+   const seen = new Set(applicationSuites.map((s) => s.relativePath))
+   for (const s of rootLevel) {
+     if (!seen.has(s.relativePath)) applicationSuites.push(s)
+   }
+   applicationSuites.sort((a, b) => a.relativePath.localeCompare(b.relativePath))
+ } else {
+   applicationSuites = listXmlSuites(fw.suitesRoot, fw.suitesRoot, 'root-')
+ }
+
+
+ const moduleSuites = hasModulesFolder
+   ? listXmlSuites(modulesDir, fw.suitesRoot, 'mod-')
    : []
 
 
- const modules = fw.id === 'selenium' && fs.existsSync(path.join(fw.suitesRoot, 'modules'))
-   ? fs.readdirSync(path.join(fw.suitesRoot, 'modules'), { withFileTypes: true })
+ const modules = hasModulesFolder
+   ? fs.readdirSync(modulesDir, { withFileTypes: true })
      .filter((d) => d.isDirectory())
      .map((d) => d.name)
      .sort()
    : []
 
 
- const pageDir = path.join(fw.mainSrc, 'pages')
- const testDir = path.join(fw.testSrc, 'tests')
- const pages = listJavaFiles(pageDir).map((f) => parseJavaMeta(f, `${fw.packageRoot}.pages`))
- const tests = listJavaFiles(testDir).map((f) => parseJavaMeta(f, `${fw.packageRoot}.tests`))
-
-
- const packages = {}
- for (const section of [
-   { key: 'pages', dir: path.join(fw.mainSrc, 'pages'), pkg: `${fw.packageRoot}.pages` },
-   { key: 'core', dir: path.join(fw.mainSrc, 'core'), pkg: `${fw.packageRoot}.core` },
-   { key: 'driver', dir: path.join(fw.mainSrc, 'driver'), pkg: `${fw.packageRoot}.driver` },
-   { key: 'config', dir: path.join(fw.mainSrc, 'config'), pkg: `${fw.packageRoot}.config` },
-   { key: 'constants', dir: path.join(fw.mainSrc, 'constants'), pkg: `${fw.packageRoot}.constants` },
-   { key: 'utils', dir: path.join(fw.mainSrc, 'utils'), pkg: `${fw.packageRoot}.utils` },
-   { key: 'tests', dir: path.join(fw.testSrc, 'tests'), pkg: `${fw.packageRoot}.tests` },
-   { key: 'basetest', dir: path.join(fw.testSrc, 'basetest'), pkg: `${fw.packageRoot}.basetest` },
-   { key: 'listeners', dir: path.join(fw.testSrc, 'listeners'), pkg: `${fw.packageRoot}.listeners` },
-   { key: 'dataproviders', dir: path.join(fw.testSrc, 'dataproviders'), pkg: `${fw.packageRoot}.dataproviders` },
- ]) {
-   packages[section.key] = listJavaFiles(section.dir).map((f) => parseJavaMeta(f, section.pkg))
- }
-
-
- // Playwright may keep browser manager under a different folder name
- if (packages.driver.length === 0) {
-   const alt = listJavaFiles(fw.mainSrc).filter((f) => /Manager|Factory|Driver|Browser/i.test(path.basename(f)))
-   packages.driver = alt.map((f) => parseJavaMeta(f, fw.packageRoot))
- }
+ const packages = discoverPackages(fw)
+ const pages = packages.pages || []
+ const tests = packages.tests || []
 
 
  return {
@@ -235,6 +290,7 @@ export function buildCatalog(frameworkId) {
      label: fw.label,
      packageRoot: fw.packageRoot,
      projectDir: path.relative(ROOT, fw.dir),
+     suitesRoot: path.relative(ROOT, fw.suitesRoot),
    },
    applicationSuites,
    moduleSuites,
@@ -247,6 +303,7 @@ export function buildCatalog(frameworkId) {
      ...applicationSuites.map((s) => s.name),
      ...moduleSuites.map((s) => s.name),
    ])].sort(),
+   source: 'filesystem',
  }
 }
 
@@ -411,3 +468,6 @@ export function readProjectSource(frameworkId, type, relativePath) {
    content,
  }
 }
+
+
+

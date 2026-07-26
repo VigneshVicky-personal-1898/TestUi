@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Browser storage helpers for local/session/cookie/IndexedDB practice
-// ACCEPTED-BY: vignesh
+
+//  Browser storage helpers for local/session/cookie/IndexedDB practice
+
 
 const DB_NAME = 'testui_idb'
 const STORE = 'kv'

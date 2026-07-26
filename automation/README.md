@@ -1,11 +1,7 @@
 # TestUi — Enterprise UI Automation Playground
 
 
-<!--
-AI-ASSISTED: Cursor
-PROMPT: Document local :7173 and GitHub Pages /TestUi/ base path
-ACCEPTED-BY: vignesh
--->
+
 
 
 React 19 + Vite + MUI app for practicing **Selenium, Playwright, Cypress, WebDriverIO, and AI automation** interview scenarios.

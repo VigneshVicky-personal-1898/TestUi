@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Persist runs and git-sync artifacts after Maven execution
-// ACCEPTED-BY: vignesh
+
+//  Persist runs and git-sync artifacts after Maven execution
+
 import { spawn } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'

@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: App entry point with Redux-ready React 19 root mount
-// ACCEPTED-BY: vignesh
+
+//  App entry point with Redux-ready React 19 root mount
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'

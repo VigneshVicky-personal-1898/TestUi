@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Clean professional Soft UI with muted teal accents
-// ACCEPTED-BY: vignesh
+
+//  Clean professional Soft UI with muted teal accents
+
 import { createTheme, alpha } from '@mui/material/styles'
 
 /** Restrained Soft UI — light dual shadows, teal accent, balanced contrast. */

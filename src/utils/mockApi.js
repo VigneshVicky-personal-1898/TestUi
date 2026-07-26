@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Mock API simulator for delay, status codes, retry, rate-limit, offline
-// ACCEPTED-BY: vignesh
+
+//  Mock API simulator for delay, status codes, retry, rate-limit, offline
+
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 

@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Migrate interactive controls to automation helpers (id/name/data-testid/aria-label)
-// ACCEPTED-BY: vignesh
+
+//  Migrate interactive controls to automation helpers (id/name/data-testid/aria-label)
+
 
 import { useState } from 'react'
 import {

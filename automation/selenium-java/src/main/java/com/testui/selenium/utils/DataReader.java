@@ -1,8 +1,8 @@
 package com.testui.selenium.utils;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Create TestUi Selenium Java Maven POM with TestNG framework
-// ACCEPTED-BY: vignesh
+
+//  Create TestUi Selenium Java Maven POM with TestNG framework
+
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -1,8 +1,6 @@
 package com.testui.playwright.utils;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Create TestUi Playwright Java Maven POM with TestNG framework
-// ACCEPTED-BY: vignesh
+
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

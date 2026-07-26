@@ -1,8 +1,6 @@
 package com.testui.playwright.utils;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Create TestUi Playwright Java Maven POM with TestNG framework
-// ACCEPTED-BY: vignesh
+
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

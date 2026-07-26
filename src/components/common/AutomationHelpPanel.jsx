@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Clean Soft UI Automation Help panel styling
-// ACCEPTED-BY: vignesh
+
+//  Clean Soft UI Automation Help panel styling
+
 import { useEffect, useState } from 'react'
 import {
   Accordion, AccordionSummary, AccordionDetails, Box, Typography, Chip, Stack,

@@ -1,16 +1,17 @@
 # TestUi — Enterprise UI Automation Playground
 
-<!--
-AI-ASSISTED: Cursor
-PROMPT: Document deployed TestUI runner with git artifact storage
-ACCEPTED-BY: vignesh
--->
+
+
+
 
 React 19 + Vite + MUI app for practicing **Selenium, Playwright, Cypress, WebDriverIO, and AI automation** interview scenarios.
 
+
 Includes an **Automation Test Runner** (`/api/runner`) so Selenium / Playwright Maven suites can be executed from the UI — locally or on a deployed host — with logs, reports, and screenshots stored under `automation/runs/` and optionally committed back to Git.
 
+
 ## Quick start
+
 
 ```bash
 cd TestUi
@@ -18,21 +19,56 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173).
+
+Open [http://localhost:7173/login](http://localhost:7173/login).
+
+
+### Local vs GitHub Pages
+
+
+| Environment | Example URL | Base path |
+|-------------|-------------|-----------|
+| Local (`npm run dev`) | `http://localhost:7173/login` | `/` |
+| GitHub Pages | `https://vigneshvicky-personal-1898.github.io/TestUi/login` | `/TestUi/` |
+
+
+```bash
+# Production build for GitHub Pages (assets + router under /TestUi/)
+npm run build:gh-pages
+
+
+# Preview that build locally
+npm run preview:gh-pages
+```
+
+
+Deep links on GitHub Pages are supported via `dist/404.html` (generated from `index.html`). Enable **Settings → Pages → GitHub Actions** and use the workflow that runs `npm run build:gh-pages`.
+
+
+### Explore the Framework module
+
+
+1. Log in (e.g. `admin@gmail.com` / `admin@123`)
+2. Open **Modules → Framework** (`/framework`) — first item in the nav
+3. Browse **Java Project Structure**, **Test Suites**, and **Framework Architecture Diagram**
+
 
 ### Run suites from the UI
 
-1. Log in (e.g. `admin@gmail.com` / `admin@123`)
-2. Open **Advanced Modules → Test Runner** (`/test-runner`)
-3. Choose **Selenium** or **Playwright**, pick a suite / module, set **Visible/Headless**, then **Run Suite**
-4. Watch **Live Logs**, then open **Reports & Screenshots**
-5. Use **Framework Structure** for the architecture diagram and Java class browser
+
+1. Open **Advanced Modules → Test Runner** (`/test-runner`)
+2. Choose **Selenium** or **Playwright**, pick a suite / module, set **Visible/Headless**, then **Run Suite**
+3. Watch **Live Logs**, then open **Reports & Screenshots**
+
 
 CLI equivalent still works under `automation/selenium-java` and `automation/playwright-java`.
 
+
 ## Deploy from Git (production)
 
+
 Static Git hosting alone cannot spawn Maven. Deploy TestUI on a host with **Node 20+, JDK 17+, Maven, and Chrome/Chromium**, then:
+
 
 ```bash
 git clone https://version.onebill.net/onebill/QE_Engine.git
@@ -44,24 +80,30 @@ set -a && source .env.runner && set +a
 npm start                            # serves dist/ + /api/runner on PORT (default 4173)
 ```
 
+
 Open the deployed URL → **Test Runner**. Base URL defaults to the deployment origin so suites hit the same app.
+
 
 ### Persist results in Git
 
+
 Each run writes:
+
 
 ```
 TestUi/automation/runs/<runId>/
-  summary.json
-  logs.txt / logs.json
-  reports/          # Extent HTML copies
-  screenshots/      # failure screenshots
-  surefire/         # TestNG/Surefire HTML
-  artifacts.json
+ summary.json
+ logs.txt / logs.json
+ reports/          # Extent HTML copies
+ screenshots/      # failure screenshots
+ surefire/         # TestNG/Surefire HTML
+ artifacts.json
 automation/runs/index.json
 ```
 
+
 Enable sync on the deploy host (see `.env.runner.example`):
+
 
 | Variable | Purpose |
 |----------|---------|
@@ -71,9 +113,12 @@ Enable sync on the deploy host (see `.env.runner.example`):
 | `RUNNER_GIT_BRANCH=` | Empty = current branch |
 | `RUNNER_GIT_REPO_URL=` | Shown in the UI |
 
+
 The host checkout must allow `git commit` / `git push` (SSH key or credential helper). The Test Runner also has a **Commit / push** vs **Disk only** toggle per run.
 
+
 ## Demo accounts
+
 
 | Email | Password | Notes |
 |-------|----------|--------|
@@ -82,9 +127,12 @@ The host checkout must allow `git commit` / `git push` (SSH key or credential he
 | `employee@testui.com` | `Employee@123` | OTP `123456` |
 | `viewer@testui.com` | `Viewer@123` | Read-only RBAC |
 
+
 Captcha: **`TEST`**
 
+
 ## Module map (interview coverage)
+
 
 | Area | Routes / pages |
 |------|----------------|
@@ -101,9 +149,12 @@ Captcha: **`TEST`**
 | Runner | **Test Runner** (`/test-runner`) — execute Selenium/Playwright Maven suites, logs, reports, framework diagram |
 | Practice | Automation Lab + **Playground 100+** (dynamic IDs, waits, shadow, frames, flaky, virtual list, …) |
 
+
 ## Automation Help on every page
 
+
 Each page includes a collapsible **Automation Help** panel (under the title) with:
+
 
 - Key concepts (POM, waits, Shadow DOM, frames, file upload, DnD, …)
 - Techniques to practice on that screen
@@ -111,11 +162,15 @@ Each page includes a collapsible **Automation Help** panel (under the title) wit
 - Side-by-side **Selenium / Playwright / Cypress** code samples
 - Guidance on which framework fits the scenario best
 
+
 Content lives in `src/data/automationHelp.js`; UI in `src/components/common/AutomationHelpPanel.jsx` (wired via `PageHeader`).
+
 
 ## Automation identifiers
 
+
 Helpers live in `src/utils/automation.js`. Interactive controls expose stable, unique attributes so scripts can locate them reliably.
+
 
 | Attribute | When set |
 |-----------|----------|
@@ -124,7 +179,9 @@ Helpers live in `src/utils/automation.js`. Interactive controls expose stable, u
 | `name` | Buttons, fields, selects, checkboxes / radios / switches |
 | `aria-label` | Icon buttons, nav links, and other icon-only / ambiguous controls |
 
+
 **Pattern:** `{module}-{element}[-qualifier]` (kebab-case)
+
 
 | Helper | Use for |
 |--------|---------|
@@ -139,7 +196,9 @@ Helpers live in `src/utils/automation.js`. Interactive controls expose stable, u
 | `input(id, name?)` | Native / file inputs |
 | `dyn(base, ...parts)` | Dynamic row / action ids |
 
+
 **Examples**
+
 
 | Locator | Element |
 |---------|---------|
@@ -152,9 +211,12 @@ Helpers live in `src/utils/automation.js`. Interactive controls expose stable, u
 | `#payment-card` | Checkout credit-card radio |
 | `#pg-btn-delayed-appear` | Playground delayed button |
 
+
 ## Highest-value practice page
 
+
 Open **Playground 100+** (`/playground`) — isolated tabs for:
+
 
 - Dynamic IDs / random classes / changing text
 - Delayed appear / clickability / AJAX / stale / overlap
@@ -166,11 +228,15 @@ Open **Playground 100+** (`/playground`) — isolated tabs for:
 - Offline / slow API / flaky / random toast-alert
 - Captcha/OTP dummy, a11y & viewport chips
 
+
 ## Stack
+
 
 React 19 · Vite · MUI · React Router · Redux Toolkit · React Hook Form · TanStack Table · AG Grid · Recharts · React DnD · FullCalendar · React Quill · notistack
 
+
 ## Scripts
+
 
 | Command | Description |
 |---------|-------------|

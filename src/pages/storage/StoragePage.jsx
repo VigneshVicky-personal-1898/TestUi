@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Browser storage practice: localStorage, sessionStorage, cookies, IndexedDB
-// ACCEPTED-BY: vignesh
+
+//  Browser storage practice: localStorage, sessionStorage, cookies, IndexedDB
+
 
 import { useState } from 'react'
 import { Box, Paper, Tabs, Tab, TextField, Button, Stack, Typography, Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material'

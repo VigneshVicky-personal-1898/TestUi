@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Migrate interactive controls to automation helpers (id/name/data-testid/aria-label)
-// ACCEPTED-BY: vignesh
+
+//  Migrate interactive controls to automation helpers (id/name/data-testid/aria-label)
+
 import { useEffect, useRef, useState } from 'react'
 import {
   Box, Paper, Typography, Button, Stack, TextField, Divider, Alert, Menu, MenuItem,

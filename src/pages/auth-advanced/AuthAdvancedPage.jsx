@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Advanced auth: SSO, OAuth, JWT, lock, biometric, concurrent login
-// ACCEPTED-BY: vignesh
+
+//  Advanced auth: SSO, OAuth, JWT, lock, biometric, concurrent login
+
 
 import { useEffect, useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'

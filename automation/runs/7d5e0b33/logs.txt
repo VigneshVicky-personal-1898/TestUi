@@ -6,3 +6,26 @@
 [2026-07-22T12:54:00.631Z] [system] [runner] Artifacts saved to automation\runs\7d5e0b33
 [2026-07-22T12:54:00.632Z] [system] [git] Syncing run artifacts to git repository…
 [2026-07-22T12:54:00.655Z] [system] [runner] Process exited with code -4058
+[2026-07-22T12:54:00.774Z] [system] [runner] Artifacts saved to automation\runs\7d5e0b33
+[2026-07-22T12:54:00.775Z] [system] [git] Syncing run artifacts to git repository…
+[2026-07-22T12:54:00.798Z] [system] [git] Repository: C:/Users/Nivetha/OneDrive/Desktop/Test_Automation/TestUi
+[2026-07-22T12:54:01.072Z] [system] [git] Repository: C:/Users/Nivetha/OneDrive/Desktop/Test_Automation/TestUi
+[2026-07-22T12:54:01.246Z] [system] [git] git add automation\runs
+[2026-07-22T12:54:01.339Z] [system] [git] git add automation\runs
+[2026-07-22T12:54:01.429Z] [system] [git] add failed: fatal: Unable to create 'C:/Users/Nivetha/OneDrive/Desktop/Test_Automation/TestUi/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+[2026-07-22T12:54:01.543Z] [system] [git] Sync error: fatal: Unable to create 'C:/Users/Nivetha/OneDrive/Desktop/Test_Automation/TestUi/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+[2026-07-22T12:54:02.123Z] [system] [git] commit: testui-runner: selenium failed (7d5e0b33)
+[2026-07-22T12:54:02.603Z] [system] [git] push origin main
+[2026-07-22T12:54:08.619Z] [system] [git] push succeeded

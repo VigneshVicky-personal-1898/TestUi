@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Add option() automation attrs to enterprise table MenuItems
-// ACCEPTED-BY: vignesh
+
+//  Add option() automation attrs to enterprise table MenuItems
+
 
 import { useEffect, useMemo, useState, useCallback } from 'react'
 import { DndProvider, useDrag, useDrop } from 'react-dnd'

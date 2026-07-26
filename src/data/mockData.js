@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Mock seed data for users, products, orders, notifications, files, workflows
-// ACCEPTED-BY: vignesh
+
+//  Mock seed data for users, products, orders, notifications, files, workflows
+
 
 export const DEMO_USERS = [
   { id: '1', email: 'admin@gmail.com', password: 'admin@123', name: 'Admin User', role: 'admin', department: 'IT', status: 'active', avatar: '', phone: '+1-555-0101', createdAt: '2024-01-15' },

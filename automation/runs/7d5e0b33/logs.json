@@ -38,5 +38,60 @@
     "t": 1784724840655,
     "stream": "system",
     "line": "[runner] Process exited with code -4058"
+  },
+  {
+    "t": 1784724840774,
+    "stream": "system",
+    "line": "[runner] Artifacts saved to automation\\runs\\7d5e0b33"
+  },
+  {
+    "t": 1784724840775,
+    "stream": "system",
+    "line": "[git] Syncing run artifacts to git repository…"
+  },
+  {
+    "t": 1784724840798,
+    "stream": "system",
+    "line": "[git] Repository: C:/Users/Nivetha/OneDrive/Desktop/Test_Automation/TestUi"
+  },
+  {
+    "t": 1784724841072,
+    "stream": "system",
+    "line": "[git] Repository: C:/Users/Nivetha/OneDrive/Desktop/Test_Automation/TestUi"
+  },
+  {
+    "t": 1784724841246,
+    "stream": "system",
+    "line": "[git] git add automation\\runs"
+  },
+  {
+    "t": 1784724841339,
+    "stream": "system",
+    "line": "[git] git add automation\\runs"
+  },
+  {
+    "t": 1784724841429,
+    "stream": "system",
+    "line": "[git] add failed: fatal: Unable to create 'C:/Users/Nivetha/OneDrive/Desktop/Test_Automation/TestUi/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+  },
+  {
+    "t": 1784724841543,
+    "stream": "system",
+    "line": "[git] Sync error: fatal: Unable to create 'C:/Users/Nivetha/OneDrive/Desktop/Test_Automation/TestUi/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+  },
+  {
+    "t": 1784724842123,
+    "stream": "system",
+    "line": "[git] commit: testui-runner: selenium failed (7d5e0b33)"
+  },
+  {
+    "t": 1784724842603,
+    "stream": "system",
+    "line": "[git] push origin main"
+  },
+  {
+    "t": 1784724848619,
+    "stream": "system",
+    "line": "[git] push succeeded"
   }
 ]

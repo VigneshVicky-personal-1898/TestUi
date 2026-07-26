@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Live dashboard with websocket metrics, widget drag/drop, resize, save layout
-// ACCEPTED-BY: vignesh
+
+//  Live dashboard with websocket metrics, widget drag/drop, resize, save layout
+
 
 import { useEffect, useState, useCallback } from 'react'
 import { DndProvider, useDrag, useDrop } from 'react-dnd'

@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Migrate Settings interactive controls to automation helpers
-// ACCEPTED-BY: vignesh
+
+//  Migrate Settings interactive controls to automation helpers
+
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {

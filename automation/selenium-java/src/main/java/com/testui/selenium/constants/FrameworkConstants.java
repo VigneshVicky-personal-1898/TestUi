@@ -1,8 +1,6 @@
 package com.testui.selenium.constants;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Create TestUi Selenium Java Maven POM with TestNG framework
-// ACCEPTED-BY: vignesh
+
 
 /**
  * Central paths and timing defaults for the Selenium framework.

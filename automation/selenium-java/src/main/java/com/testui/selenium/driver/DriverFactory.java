@@ -1,8 +1,6 @@
 package com.testui.selenium.driver;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Suppress Selenium CDP console warnings when creating drivers
-// ACCEPTED-BY: vignesh
+h
 
 import com.testui.selenium.config.ConfigManager;
 import com.testui.selenium.constants.FrameworkConstants;

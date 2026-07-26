@@ -1,8 +1,6 @@
 package com.testui.playwright.basetest;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Prefer CLI/UI headless browser baseUrl over suite XML params
-// ACCEPTED-BY: vignesh
+
 
 import com.testui.playwright.config.ConfigManager;
 import com.testui.playwright.core.PlaywrightManager;

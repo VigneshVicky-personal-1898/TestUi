@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Advanced search: suggestions, highlight, saved and recent searches
-// ACCEPTED-BY: vignesh
+
+//  Advanced search: suggestions, highlight, saved and recent searches
+
 
 import { useMemo, useState } from 'react'
 import { Box, Paper, TextField, List, ListItem, ListItemText, Chip, Stack, Typography, Button } from '@mui/material'
