@@ -1,6 +1,3 @@
-
-//  Top-level Framework module page for structure suites diagram
-
 import { useCallback, useEffect, useState } from 'react'
 import {
  Alert, Box, Button, FormControl, InputLabel, LinearProgress, MenuItem, Select, Stack,
@@ -8,7 +5,7 @@ import {
 import RefreshIcon from '@mui/icons-material/Refresh'
 import { PageHeader } from '../../components/common/PageHeader'
 import FrameworkExplorer from './FrameworkExplorer'
-import { runnerApi } from '../../utils/runnerApi'
+import { getRunnerMode, runnerApi } from '../../utils/runnerApi'
 import { aid, btn, select, option, optId } from '../../utils/automation'
 
 
@@ -17,6 +14,7 @@ export default function FrameworkPage() {
  const [catalog, setCatalog] = useState(null)
  const [structure, setStructure] = useState(null)
  const [apiOk, setApiOk] = useState(null)
+ const [runnerMode, setRunnerMode] = useState('unknown')
  const [loading, setLoading] = useState(false)
  const [error, setError] = useState('')
 
@@ -28,7 +26,9 @@ export default function FrameworkPage() {
    }
    try {
      await runnerApi.health()
-     setApiOk(true)
+     const mode = getRunnerMode()
+     setRunnerMode(mode)
+     setApiOk(mode === 'api' || mode === 'static')
      const [cat, struct] = await Promise.all([
        runnerApi.catalog(fw),
        runnerApi.structure(fw),
@@ -37,8 +37,9 @@ export default function FrameworkPage() {
      setStructure(struct)
    } catch (err) {
      setApiOk(false)
+     setRunnerMode(getRunnerMode())
      if (!silent) {
-       setError(err.message || 'Runner API unavailable. Start the app with npm run dev.')
+       setError(err.message || 'Folder browse unavailable on this host.')
      }
    } finally {
      if (!silent) setLoading(false)
@@ -47,6 +48,7 @@ export default function FrameworkPage() {
 
 
  const silentRefresh = useCallback(() => {
+   if (getRunnerMode() !== 'api') return
    refresh(framework, { silent: true })
  }, [framework, refresh])
 
@@ -97,7 +99,20 @@ export default function FrameworkPage() {
 
      {apiOk === false && (
        <Alert severity="error" sx={{ mb: 2 }} {...aid('framework-alert-api')}>
-         Folder scan API is offline. Use <strong>npm run dev</strong> so suites and Java sources can be read from disk.
+         Folder browse is offline on this git/static host (no Node <code>/api/runner</code>).
+         {' '}Redeploy with <strong>npm run build:gh-pages</strong> so a <code>runner-static</code> snapshot is included.
+         {' '}For live disk scanning locally, use <strong>npm run dev</strong> → <code>http://localhost:7173</code>.
+       </Alert>
+     )}
+     {apiOk && runnerMode === 'static' && (
+       <Alert severity="info" sx={{ mb: 2 }} {...aid('framework-alert-static')}>
+         Git/static host mode: showing a <strong>browse-only snapshot</strong> of suites and Java sources.
+         {' '}Live folder updates and <strong>Run Suite</strong> need <code>npm run dev</code> (or a Node deploy).
+       </Alert>
+     )}
+     {apiOk && runnerMode === 'api' && (
+       <Alert severity="success" sx={{ mb: 2 }} {...aid('framework-alert-live')}>
+         Live folder scan is connected — lists update from project directories on disk.
        </Alert>
      )}
      {error && (
