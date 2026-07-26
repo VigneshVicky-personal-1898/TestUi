@@ -7,12 +7,13 @@
  "scripts": {
    "dev": "vite",
    "build": "vite build",
-   "build:gh-pages": "vite build --mode gh-pages",
+   "build:gh-pages": "npm run export:runner-static && vite build --mode gh-pages",
    "lint": "oxlint",
    "preview": "vite preview",
    "preview:gh-pages": "vite preview --mode gh-pages",
    "start": "node server/index.js",
    "serve": "npm run build && node server/index.js",
+   "export:runner-static": "node scripts/export-runner-static.mjs",
    "runner:health": "node --input-type=module -e \"import { listFrameworks } from './server/runner/catalog.js'; console.log(listFrameworks())\""
  },
  "dependencies": {
