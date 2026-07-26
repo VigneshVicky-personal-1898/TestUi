@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Persist runner logs reports screenshots under automation/runs
-// ACCEPTED-BY: vignesh
+
+//  Persist runner logs reports screenshots under automation/runs
+
 import fs from 'node:fs'
 import path from 'node:path'
 import { AUTOMATION_ROOT, getFramework, listFrameworkArtifacts, ROOT } from './catalog.js'

@@ -1,10 +1,6 @@
 # TestUi Selenium Java Framework
 
-<!--
-AI-ASSISTED: Cursor
-PROMPT: Document full TestUi page coverage across all app modules
-ACCEPTED-BY: vignesh
--->
+
 
 Enterprise **Selenium 4 + TestNG + Page Factory (POM)** automation for the **entire TestUi app** (auth, core modules, ecommerce, advanced labs, errors).
 

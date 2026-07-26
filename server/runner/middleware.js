@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Runner API config stored-runs and artifact endpoints for deploy
-// ACCEPTED-BY: vignesh
+
+//  Runner API config stored-runs and artifact endpoints for deploy
+
 import fs from 'node:fs'
 import {
  listFrameworks,

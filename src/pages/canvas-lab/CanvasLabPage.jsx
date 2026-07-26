@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Canvas lab: signature, paint, annotation tools
-// ACCEPTED-BY: vignesh
+
+//  Canvas lab: signature, paint, annotation tools
+
 
 import { useEffect, useRef, useState } from 'react'
 import { Box, Paper, Button, Stack, Slider, Typography } from '@mui/material'

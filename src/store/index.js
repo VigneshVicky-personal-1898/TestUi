@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Redux Toolkit store with auth, ui, data, cart, and notifications slices
-// ACCEPTED-BY: vignesh
+
+//  Redux Toolkit store with auth, ui, data, cart, and notifications slices
+
 import { configureStore, createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import {
   DEMO_USERS,
@@ -253,9 +253,9 @@ const notifSlice = createSlice({
     addNotification(state, action) {
       state.items.unshift(action.payload)
     },
-    // AI-ASSISTED: Cursor
-    // PROMPT: Add clear-all and delete-single notification actions
-    // ACCEPTED-BY: vignesh
+    
+    //  Add clear-all and delete-single notification actions
+    
     deleteNotification(state, action) {
       state.items = state.items.filter((i) => i.id !== action.payload)
     },

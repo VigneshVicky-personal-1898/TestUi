@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Migrate Calendar page to automation helpers with option MenuItems
-// ACCEPTED-BY: vignesh
+
+//  Migrate Calendar page to automation helpers with option MenuItems
+
 import { useState, useRef } from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'

@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Clean Soft UI Dashboard KPI cards with teal accents
-// ACCEPTED-BY: vignesh
+
+//  Clean Soft UI Dashboard KPI cards with teal accents
+
 import { useSelector } from 'react-redux'
 import {
   Box, Grid, Card, CardContent, Typography, Table, TableBody, TableCell,

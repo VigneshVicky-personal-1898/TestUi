@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Soft UI Users page inherits neumorphic theme surfaces
-// ACCEPTED-BY: vignesh
+
+//  Soft UI Users page inherits neumorphic theme surfaces
+
 import { useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {

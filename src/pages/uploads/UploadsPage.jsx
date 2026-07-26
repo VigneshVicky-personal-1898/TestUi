@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Advanced upload: multi, drag-drop, progress, cancel, resume, crop, compress
-// ACCEPTED-BY: vignesh
+
+//  Advanced upload: multi, drag-drop, progress, cancel, resume, crop, compress
+
 
 import { useRef, useState } from 'react'
 import { Box, Paper, Button, Typography, LinearProgress, Stack, List, ListItem, ListItemText, IconButton, Slider } from '@mui/material'

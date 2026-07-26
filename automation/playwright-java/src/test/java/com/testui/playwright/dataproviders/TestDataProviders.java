@@ -1,8 +1,6 @@
 package com.testui.playwright.dataproviders;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Create TestUi Playwright Java Maven POM with TestNG framework
-// ACCEPTED-BY: vignesh
+
 
 import com.testui.playwright.utils.DataReader;
 import org.testng.annotations.DataProvider;

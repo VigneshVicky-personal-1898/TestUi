@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Clean Soft UI AppLayout — flatter shell, subtle shadows
-// ACCEPTED-BY: vignesh
+
+//  Clean Soft UI AppLayout — flatter shell, subtle shadows
+
 import { useEffect, useMemo, useState } from 'react'
 import { Outlet, useNavigate, useLocation, Link as RouterLink } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'

@@ -1,8 +1,8 @@
 package com.testui.selenium.pages;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Switch page locators from CSS to XPath
-// ACCEPTED-BY: vignesh
+
+//  Switch page locators from CSS to XPath
+
 
 import com.testui.selenium.core.BasePage;
 import org.openqa.selenium.WebElement;

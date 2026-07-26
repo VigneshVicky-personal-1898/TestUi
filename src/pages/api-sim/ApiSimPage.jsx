@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Add option() automation attrs to API sim scenario MenuItems
-// ACCEPTED-BY: vignesh
+
+//  Add option() automation attrs to API sim scenario MenuItems
+
 
 import { useState } from 'react'
 import { Box, Paper, Button, Stack, Typography, Alert, MenuItem, TextField, Chip } from '@mui/material'

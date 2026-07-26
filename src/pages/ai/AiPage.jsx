@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: AI chat with stream, stop, regenerate, copy, like/dislike, history
-// ACCEPTED-BY: vignesh
+
+//  AI chat with stream, stop, regenerate, copy, like/dislike, history
+
 import { useState, useRef, useEffect } from 'react'
 import {
   Box, Paper, TextField, IconButton, Typography, Stack, Avatar, Chip, CircularProgress,

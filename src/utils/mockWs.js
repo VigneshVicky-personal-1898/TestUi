@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Fake WebSocket bus for live dashboard and notification updates
-// ACCEPTED-BY: vignesh
+
+//  Fake WebSocket bus for live dashboard and notification updates
+
 
 const listeners = new Set()
 let timer = null

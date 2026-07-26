@@ -1,8 +1,6 @@
 package com.testui.playwright.constants;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Create TestUi Playwright Java Maven POM with TestNG framework
-// ACCEPTED-BY: vignesh
+
 
 public final class FrameworkConstants {
 

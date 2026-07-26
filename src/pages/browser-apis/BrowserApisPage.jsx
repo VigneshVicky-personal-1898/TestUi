@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Browser APIs: clipboard, notification, geo, camera, mic, fullscreen, permissions
-// ACCEPTED-BY: vignesh
+
+//  Browser APIs: clipboard, notification, geo, camera, mic, fullscreen, permissions
+
 
 import { useState } from 'react'
 import { Box, Paper, Button, Stack, Typography, Alert, Grid } from '@mui/material'

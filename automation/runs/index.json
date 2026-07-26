@@ -1,5 +1,20 @@
 [
   {
+    "id": "b9e39434",
+    "framework": "selenium",
+    "status": "failed",
+    "startedAt": 1784724859839,
+    "finishedAt": 1784724860003,
+    "suiteXmlFile": "src/test/resources/suites/invalid.xml",
+    "path": "automation\\runs\\b9e39434",
+    "settings": {
+      "browser": "chrome",
+      "headless": false,
+      "baseUrl": "http://localhost:5173",
+      "gitSync": false
+    }
+  },
+  {
     "id": "7d5e0b33",
     "framework": "selenium",
     "status": "failed",

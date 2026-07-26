@@ -1,8 +1,8 @@
 package com.testui.selenium.utils;
 
-// AI-ASSISTED: Cursor
-// PROMPT: ANSI color helper for clean colored console test logs
-// ACCEPTED-BY: vignesh
+
+//  ANSI color helper for clean colored console test logs
+
 
 /**
  * ANSI color helpers for terminal output. Disabled when {@code NO_COLOR} is set

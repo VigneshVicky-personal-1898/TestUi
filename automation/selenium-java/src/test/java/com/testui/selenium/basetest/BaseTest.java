@@ -1,8 +1,8 @@
 package com.testui.selenium.basetest;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Prefer CLI/UI headless browser baseUrl over suite XML params
-// ACCEPTED-BY: vignesh
+
+//  Prefer CLI/UI headless browser baseUrl over suite XML params
+
 
 import com.testui.selenium.config.ConfigManager;
 import com.testui.selenium.driver.DriverFactory;

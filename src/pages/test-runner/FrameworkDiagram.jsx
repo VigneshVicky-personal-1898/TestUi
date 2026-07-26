@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Soft UI framework architecture diagram for Selenium/Playwright
-// ACCEPTED-BY: vignesh
+
+//  Soft UI framework architecture diagram for Selenium/Playwright
+
 import { Box, Typography, Stack, Chip, Paper, Divider } from '@mui/material'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import { aid, dyn } from '../../utils/automation'

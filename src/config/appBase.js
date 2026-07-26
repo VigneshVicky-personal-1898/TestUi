@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Shared base-path helpers for local and GitHub Pages
-// ACCEPTED-BY: vignesh
+
+//  Shared base-path helpers for local and GitHub Pages
+
 
 
 /**

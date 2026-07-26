@@ -1,8 +1,6 @@
 package com.testui.selenium.driver;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Create TestUi Selenium Java Maven POM with TestNG framework
-// ACCEPTED-BY: vignesh
+
 
 import org.openqa.selenium.WebDriver;
 

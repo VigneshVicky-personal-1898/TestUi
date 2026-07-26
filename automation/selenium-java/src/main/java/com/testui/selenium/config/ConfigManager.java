@@ -1,8 +1,6 @@
 package com.testui.selenium.config;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Create TestUi Selenium Java Maven POM with TestNG framework
-// ACCEPTED-BY: vignesh
+
 
 import com.testui.selenium.constants.FrameworkConstants;
 import org.apache.logging.log4j.LogManager;

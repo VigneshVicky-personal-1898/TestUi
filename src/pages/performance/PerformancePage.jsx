@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Performance: 10k rows, lazy load, infinite scroll, network/CPU delay simulation
-// ACCEPTED-BY: vignesh
+
+//  Performance: 10k rows, lazy load, infinite scroll, network/CPU delay simulation
+
 
 import { useEffect, useMemo, useRef, useState, useTransition } from 'react'
 import { Box, Paper, Typography, Button, Slider, List, ListItem, ListItemText, CircularProgress, Stack } from '@mui/material'

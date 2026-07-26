@@ -1,8 +1,8 @@
 package com.testui.selenium.tests;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Cover all TestUi app pages with POM and smoke tests
-// ACCEPTED-BY: vignesh
+
+//  Cover all TestUi app pages with POM and smoke tests
+
 
 import com.testui.selenium.basetest.BaseTest;
 import com.testui.selenium.pages.BrowserApisPage;

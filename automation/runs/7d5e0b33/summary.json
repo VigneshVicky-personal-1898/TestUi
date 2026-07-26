@@ -15,8 +15,16 @@
   "finishedAt": 1784724840652,
   "exitCode": -4058,
   "error": "spawn mvn ENOENT",
-  "logCount": 15,
-  "storedAt": 1784724841431,
+  "logCount": 19,
+  "storedAt": 1784724848620,
   "repoRelativePath": "automation\\runs\\7d5e0b33",
   "git": {
-   
+    "ok": true,
+    "committed": true,
+    "pushed": true,
+    "cwd": "C:/Users/Nivetha/OneDrive/Desktop/Test_Automation/TestUi",
+    "branch": "main",
+    "remote": "origin",
+    "message": "testui-runner: selenium failed (7d5e0b33)"
+  }
+}

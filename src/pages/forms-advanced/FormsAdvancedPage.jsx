@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Add option() automation attrs to advanced forms MenuItems
-// ACCEPTED-BY: vignesh
+
+//  Add option() automation attrs to advanced forms MenuItems
+
 
 import { useEffect, useState } from 'react'
 import { useForm, useFieldArray, Controller } from 'react-hook-form'

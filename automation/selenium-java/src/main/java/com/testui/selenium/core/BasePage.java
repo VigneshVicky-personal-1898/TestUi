@@ -1,8 +1,5 @@
 package com.testui.selenium.core;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Use XPath locators; fix type() for MUI inputs without clear()
-// ACCEPTED-BY: vignesh
 
 import com.testui.selenium.config.ConfigManager;
 import com.testui.selenium.constants.FrameworkConstants;
@@ -35,10 +32,10 @@ public abstract class BasePage {
     protected final Actions actions;
 
     protected BasePage() {
-        this.driver = DriverManager.getDriver();
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(
+        driver = DriverManager.getDriver();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(
                 ConfigManager.getInt("explicitWait", FrameworkConstants.DEFAULT_EXPLICIT_WAIT)));
-        this.actions = new Actions(driver);
+        actions = new Actions(driver);
         initElements();
     }
 

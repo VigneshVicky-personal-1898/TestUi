@@ -1,10 +1,6 @@
 # TestUi Playwright Java Framework
 
-<!--
-AI-ASSISTED: Cursor
-PROMPT: Create TestUi Playwright Java Maven POM with TestNG framework
-ACCEPTED-BY: vignesh
--->
+
 
 Enterprise **Playwright + TestNG + Page Object Model** automation for TestUi.
 

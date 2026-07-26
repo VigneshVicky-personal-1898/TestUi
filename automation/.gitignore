@@ -1,6 +1,4 @@
-# AI-ASSISTED: Cursor
-# PROMPT: Keep automation run artifacts trackable in git
-# ACCEPTED-BY: vignesh
+
 .m2/
 
 # Persist TestUI runner outputs (logs, reports, screenshots per run)

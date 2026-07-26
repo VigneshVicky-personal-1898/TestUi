@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Production Node server for TestUI + automation runner API
-// ACCEPTED-BY: vignesh
+
+//  Production Node server for TestUI + automation runner API
+
 import http from 'node:http'
 import fs from 'node:fs'
 import path from 'node:path'

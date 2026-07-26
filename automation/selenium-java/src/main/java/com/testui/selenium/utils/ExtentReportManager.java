@@ -1,8 +1,8 @@
 package com.testui.selenium.utils;
 
-// AI-ASSISTED: Cursor
-// PROMPT: User-friendly Extent report setup with report path and system info
-// ACCEPTED-BY: vignesh
+
+//  User-friendly Extent report setup with report path and system info
+
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Framework Structure explorer for suite XML and Java source
-// ACCEPTED-BY: vignesh
+
+//  Framework Structure explorer for suite XML and Java source
+
 import { useEffect, useMemo, useState } from 'react'
 import {
  Box, Card, CardContent, Chip, CircularProgress, Divider, Grid, List, ListItemButton,

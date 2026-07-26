@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Expand automation helpers for options, links, selects, icons, and full attr sets
-// ACCEPTED-BY: vignesh
+
+//  Expand automation helpers for options, links, selects, icons, and full attr sets
+
 /**
  * TestUi automation identifier convention
  * ---------------------------------------

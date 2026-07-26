@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Migrate Files page controls to automation helpers
-// ACCEPTED-BY: vignesh
+
+//  Migrate Files page controls to automation helpers
+
 import { useState } from 'react'
 import {
   Box, Paper, Button, Table, TableHead, TableRow, TableCell, TableBody,

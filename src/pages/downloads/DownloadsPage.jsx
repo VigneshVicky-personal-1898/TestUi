@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Download module: PDF Excel CSV ZIP Image with verify metadata
-// ACCEPTED-BY: vignesh
+
+//  Download module: PDF Excel CSV ZIP Image with verify metadata
+
 
 import { useState } from 'react'
 import { Box, Paper, Button, Stack, Typography, Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material'

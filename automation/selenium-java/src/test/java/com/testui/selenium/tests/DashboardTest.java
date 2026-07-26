@@ -1,8 +1,8 @@
 package com.testui.selenium.tests;
 
-// AI-ASSISTED: Cursor
-// PROMPT: Remove TestNG groups; suite XML parameters drive dashboard tests
-// ACCEPTED-BY: vignesh
+
+//  Remove TestNG groups; suite XML parameters drive dashboard tests
+
 
 import com.testui.selenium.basetest.BaseTest;
 import com.testui.selenium.pages.DashboardPage;

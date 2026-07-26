@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Add ecommerce pageId for Automation Help on shop/cart/checkout
-// ACCEPTED-BY: vignesh
+
+//  Add ecommerce pageId for Automation Help on shop/cart/checkout
+
 import { useState } from 'react'
 import { Routes, Route, Link as RouterLink, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'

@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: Migrate interactive controls to automation helpers (id/name/data-testid/aria-label)
-// ACCEPTED-BY: vignesh
+
+//  Migrate interactive controls to automation helpers (id/name/data-testid/aria-label)
+
 import { useState, useCallback, useRef } from 'react'
 import { DndProvider, useDrag, useDrop } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'

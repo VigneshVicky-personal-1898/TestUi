@@ -1,6 +1,6 @@
-// AI-ASSISTED: Cursor
-// PROMPT: BrowserRouter basename for local (/) and GitHub Pages (/TestUi)
-// ACCEPTED-BY: vignesh
+
+//  Add Framework route as separate top-level module
+
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Provider, useSelector } from 'react-redux'
 import { ThemeProvider, CssBaseline } from '@mui/material'
@@ -48,6 +48,7 @@ import PerformancePage from './pages/performance/PerformancePage'
 import ChartsGalleryPage from './pages/charts-gallery/ChartsGalleryPage'
 import CanvasLabPage from './pages/canvas-lab/CanvasLabPage'
 import TestRunnerPage from './pages/test-runner/TestRunnerPage'
+import FrameworkPage from './pages/framework/FrameworkPage'
 
 
 function ThemedApp() {
@@ -76,6 +77,7 @@ function ThemedApp() {
              )}
            >
              <Route path="/" element={<Navigate to="/dashboard" replace />} />
+             <Route path="/framework" element={<FrameworkPage />} />
              <Route path="/dashboard" element={<ProtectedRoute permission="dashboard"><DashboardPage /></ProtectedRoute>} />
              <Route path="/dashboard-live" element={<DashboardLivePage />} />
              <Route path="/users" element={<ProtectedRoute permission="users"><UsersPage /></ProtectedRoute>} />
@@ -124,6 +126,7 @@ function ThemedApp() {
  )
 }
 
+
 export default function App() {
  return (
    <Provider store={store}>
@@ -131,3 +134,6 @@ export default function App() {
    </Provider>
  )
 }
+
+
+
